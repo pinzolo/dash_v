@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = DashV::VERSION
   spec.authors       = ["pinzolo"]
   spec.email         = ["pinzolo@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Version getter}
+  spec.description   = %q{This is simple version getter of your system tools.}
+  spec.homepage      = "https://github.com/pinzolo/dash_v"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
