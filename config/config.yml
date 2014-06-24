@@ -1,0 +1,8 @@
+git:
+  name: git
+  command: git
+svn: &svn
+  name: Subversion
+  command: svn
+subversion: *svn
+
