@@ -155,7 +155,6 @@ describe DashV::Version do
     context 'when given { major: 1, minor: 23, tiny: 456, patch: 789 }' do
       let(:version) { DashV::Version.new(1, 23, 456, 789) }
       it 'returns "1.23.456p789"' do
-        binding.pry
         expect(version.to_s).to eq '1.23.456p789'
       end
     end
