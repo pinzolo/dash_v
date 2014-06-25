@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'dash_v/scanners/git_scanner'
+require 'dashv/scanners/git_scanner'
 
-describe DashV::Scanners::GitScanner do
-  subject { DashV::Scanners::GitScanner.new }
+describe Dashv::Scanners::GitScanner do
+  subject { Dashv::Scanners::GitScanner.new }
   describe '#scan' do
     context 'when given git version 1.9.3' do
       let(:result) { subject.scan('git version 1.9.3') }

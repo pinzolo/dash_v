@@ -1,12 +1,12 @@
 require 'spec_helper'
-require 'dash_v'
+require 'dashv'
 
 describe 'svn' do
   it 'supported' do
-    expect(DashV.supported?(:svn)).to eq true
+    expect(Dashv.supported?(:svn)).to eq true
   end
   it 'supported subversion too' do
-    expect(DashV.supported?('subversion')).to eq true
+    expect(Dashv.supported?('subversion')).to eq true
   end
   context 'when version is 1.6.17 (r1128011)' do
     before do
@@ -31,7 +31,7 @@ The following repository access (RA) modules are available:
       _EOS_
     end
     it 'returns version 1.6.17p1128011' do
-      expect(DashV['svn'].version).to eq '1.6.17p1128011'
+      expect(Dashv['svn'].version).to eq '1.6.17p1128011'
     end
   end
   context 'when version is 1.8.9 (r1591380)' do
@@ -59,7 +59,7 @@ The following repository access (RA) modules are available:
       _EOS_
     end
     it 'returns version 1.8.9p1591380' do
-      expect(DashV[:subversion].version).to eq '1.8.9p1591380'
+      expect(Dashv[:subversion].version).to eq '1.8.9p1591380'
     end
   end
 end

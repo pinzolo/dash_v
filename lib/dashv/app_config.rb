@@ -1,4 +1,4 @@
-module DashV
+module Dashv
   class InvalidConfigurationError < StandardError; end
 
   class AppConfig
@@ -19,7 +19,7 @@ module DashV
     def validate_scanner(scanner)
       files = Dir.glob(File.expand_path(File.join(File.dirname(__FILE__), "scanners/*.rb"))).map { |file| File.basename(file) }
       if scanner && !files.include?("#{scanner}_scanner.rb")
-        raise DashV::InvalidConfigurationError, "#{scanner} is invalid as scanner name."
+        raise Dashv::InvalidConfigurationError, "#{scanner} is invalid as scanner name."
       end
     end
   end

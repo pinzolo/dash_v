@@ -1,7 +1,7 @@
-require 'dash_v/scanners/default_scanner'
-require 'dash_v/scanners/simple_scanner'
+require 'dashv/scanners/default_scanner'
+require 'dashv/scanners/simple_scanner'
 
-module DashV
+module Dashv
   class Version
     include Comparable
 
@@ -12,7 +12,7 @@ module DashV
       if major.is_a?(Integer)
         deploy(major: major, minor: minor, tiny: tiny, patch: patch)
       elsif major.is_a?(String)
-        scanner = DashV::Scanners::DefaultScanner.new
+        scanner = Dashv::Scanners::DefaultScanner.new
         deploy(scanner.scan(major))
       elsif major.is_a?(Hash)
         deploy(major)
@@ -34,7 +34,7 @@ module DashV
     end
 
     def <=>(other)
-      value = other.is_a?(DashV::Version) ? other : DashV::Version.new(other.to_s)
+      value = other.is_a?(Dashv::Version) ? other : Dashv::Version.new(other.to_s)
       if major == value.major
         if minor == value.minor
           tiny == value.tiny ? patch <=> value.patch : tiny <=> value.tiny
@@ -47,7 +47,7 @@ module DashV
     end
 
     def tilde_greater_than?(version)
-      scanner = DashV::Scanners::SimpleScanner.new
+      scanner = Dashv::Scanners::SimpleScanner.new
       version_data = scanner.scan(version.to_s)
       if version_data.nil?
         false

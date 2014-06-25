@@ -1,3 +1,3 @@
-module DashV
+module Dashv
   VERSION = "0.0.1"
 end

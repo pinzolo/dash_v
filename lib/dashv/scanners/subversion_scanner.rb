@@ -1,4 +1,4 @@
-module DashV::Scanners
+module Dashv::Scanners
   class SubversionScanner
     PATTERN = /\Asvn,\sversion\s(?<major>\d+)\.(?<minor>\d+)\.(?<tiny>\d+)\s\(r(?<patch>\d+)\)\z/.freeze
 

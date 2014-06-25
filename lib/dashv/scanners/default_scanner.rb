@@ -1,4 +1,4 @@
-module DashV::Scanners
+module Dashv::Scanners
   class DefaultScanner
     PATTERN = /\A(?<major>\d+)(\.(?<minor>\d+)(\.(?<tiny>\d+)(p(?<patch>\d+))?)?)?\z/.freeze
 

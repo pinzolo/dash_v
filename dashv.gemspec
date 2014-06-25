@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'dash_v/gem_version'
+require 'dashv/gem_version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "dash_v"
-  spec.version       = DashV::VERSION
+  spec.name          = "dashv"
+  spec.version       = Dashv::VERSION
   spec.authors       = ["pinzolo"]
   spec.email         = ["pinzolo@gmail.com"]
   spec.summary       = %q{Version getter}
   spec.description   = %q{This is simple version getter of your system tools.}
-  spec.homepage      = "https://github.com/pinzolo/dash_v"
+  spec.homepage      = "https://github.com/pinzolo/dashv"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in dash_v.gemspec
+# Specify your gem's dependencies in dashv.gemspec
 gemspec
 
 local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.local')

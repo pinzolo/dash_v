@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'dash_v/app_config_provider'
+require 'dashv/app_config_provider'
 
 shared_examples_for 'config of aaa' do
   describe 'application config' do
@@ -26,14 +26,14 @@ shared_examples_for 'config of aaa' do
   end
 end
 
-describe DashV::AppConfigProvider do
+describe Dashv::AppConfigProvider do
   context 'when config file is valid' do
     before do
       mock_config = {'aaa' => { 'name' => 'abbr_option', 'command' => 'aaa' },
                      'bbb' => { 'name' => 'with_option', 'command' => 'BBB', 'option' => '/v', 'scanner' => 'default'}}
-      allow(DashV::ConfigLoader).to receive(:load).and_return(mock_config)
+      allow(Dashv::ConfigLoader).to receive(:load).and_return(mock_config)
     end
-    subject { DashV::AppConfigProvider.new }
+    subject { Dashv::AppConfigProvider.new }
 
     describe '#has_config?' do
       context 'when given "aaa"' do
@@ -88,7 +88,7 @@ describe DashV::AppConfigProvider do
       end
       context 'when give "zzz"' do
         it 'raise error' do
-          expect { subject.get('zzz') }.to raise_error(DashV::UnsupportedApplicationError)
+          expect { subject.get('zzz') }.to raise_error(Dashv::UnsupportedApplicationError)
         end
       end
     end
@@ -96,13 +96,13 @@ describe DashV::AppConfigProvider do
   context 'when config file contains invalid scanner' do
     before do
       mock_config = {'aaa' => { 'name' => 'abbr_option', 'command' => 'aaa', 'scanner' => 'invalid' } }
-      allow(DashV::ConfigLoader).to receive(:load).and_return(mock_config)
+      allow(Dashv::ConfigLoader).to receive(:load).and_return(mock_config)
     end
-    subject { DashV::AppConfigProvider.new }
+    subject { Dashv::AppConfigProvider.new }
 
     describe '#get' do
       it 'raise error' do
-        expect { subject.get('aaa') }.to raise_error(DashV::InvalidConfigurationError)
+        expect { subject.get('aaa') }.to raise_error(Dashv::InvalidConfigurationError)
       end
     end
   end

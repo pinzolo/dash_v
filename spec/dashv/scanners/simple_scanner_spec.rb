@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'dash_v/scanners/default_scanner'
+require 'dashv/scanners/simple_scanner'
 
-describe DashV::Scanners::DefaultScanner do
-  let(:scanner) { DashV::Scanners::DefaultScanner.new }
+describe Dashv::Scanners::SimpleScanner do
+  let(:scanner) { Dashv::Scanners::SimpleScanner.new }
   describe '#scan' do
     context 'when given nil' do
       it 'returns nil' do
@@ -87,22 +87,9 @@ describe DashV::Scanners::DefaultScanner do
     end
     context 'when given "1.23.456p789"' do
       let(:result) { scanner.scan('1.23.456p789') }
-      it 'returns Hash' do
-        expect(result).to be_a Hash
-      end
-      it 'returns "1" as major' do
-        expect(result[:major]).to eq '1'
-      end
-      it 'returns "23" as minor' do
-        expect(result[:minor]).to eq '23'
-      end
-      it 'returns "456" as tiny' do
-        expect(result[:tiny]).to eq '456'
-      end
-      it 'returns 789 as patch' do
-        expect(result[:patch]).to eq '789'
+      it 'returns nil' do
+        expect(result).to be_nil
       end
     end
   end
 end
-

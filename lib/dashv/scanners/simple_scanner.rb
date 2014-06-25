@@ -1,6 +1,6 @@
-module DashV::Scanners
-  class GitScanner
-    PATTERN = /\Agit\sversion\s(?<major>\d+)\.(?<minor>\d+)\.(?<tiny>\d+)\z/.freeze
+module Dashv::Scanners
+  class SimpleScanner
+    PATTERN = /\A(?<major>\d+)(\.(?<minor>\d+)(\.(?<tiny>\d+))?)?\z/.freeze
 
     def scan(text)
       match_data = PATTERN.match(text)
@@ -8,4 +8,3 @@ module DashV::Scanners
     end
   end
 end
-

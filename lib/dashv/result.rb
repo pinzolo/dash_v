@@ -1,4 +1,4 @@
-module DashV
+module Dashv
   class Result
     attr_reader :version, :command, :full_output, :exit_code, :pid
 
