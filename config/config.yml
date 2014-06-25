@@ -1,6 +1,7 @@
 git:
   name: git
   command: git
+  scanner: git
 svn: &svn
   name: Subversion
   command: svn
