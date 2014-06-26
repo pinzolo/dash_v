@@ -17,7 +17,7 @@ describe 'git' do
       stub_invoke('git version 2.0.0')
     end
     it 'returns version 2.0.0' do
-      expect(Dashv[:git].version).to eq '2.0.0'
+      expect(Dashv['git'].version).to eq '2.0.0'
     end
   end
 end

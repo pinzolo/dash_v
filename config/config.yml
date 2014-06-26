@@ -20,3 +20,7 @@ mercurial: &mercurial
   command: hg
   scanner: first_line_simple
 hg: *mercurial
+darcs:
+  name: Darcs
+  command: darcs
+  scanner: darcs
