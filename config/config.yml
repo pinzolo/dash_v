@@ -2,12 +2,16 @@ git:
   name: git
   command: git
   scanner: qualified_simple
-svn: &svn
+subversion: &subversion
   name: Subversion
   command: svn
   scanner: subversion
-subversion: *svn
+svn: *subversion
 vagrant:
   name: Vagrant
   cmoonad: vagrant
   scanner: qualified_simple
+cvs:
+  name: Concurrent Versions System
+  command: cvs
+  scanner: first_line_simple
