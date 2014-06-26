@@ -7,10 +7,6 @@ subversion: &subversion
   command: svn
   scanner: subversion
 svn: *subversion
-vagrant:
-  name: Vagrant
-  cmoonad: vagrant
-  scanner: qualified_simple
 cvs:
   name: Concurrent Versions System
   command: cvs
@@ -24,3 +20,7 @@ darcs:
   name: Darcs
   command: darcs
   scanner: darcs
+vagrant:
+  name: Vagrant
+  cmoonad: vagrant
+  scanner: qualified_simple
