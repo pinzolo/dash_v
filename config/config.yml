@@ -15,3 +15,8 @@ cvs:
   name: Concurrent Versions System
   command: cvs
   scanner: first_line_simple
+mercurial: &mercurial
+  name: Mercurial
+  command: hg
+  scanner: first_line_simple
+hg: *mercurial

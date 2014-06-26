@@ -1,7 +1,10 @@
 require 'spec_helper'
 
-describe 'svn' do
-  it 'supported' do
+describe 'Subversion' do
+  it 'supported subversion' do
+    expect(Dashv.supported?(:subversion)).to eq true
+  end
+  it 'supported svn' do
     expect(Dashv.supported?(:svn)).to eq true
   end
   it 'supported subversion too' do
