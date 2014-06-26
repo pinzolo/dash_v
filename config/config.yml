@@ -1,10 +1,13 @@
 git:
   name: git
   command: git
-  scanner: git
+  scanner: simple_with_prefix
 svn: &svn
   name: Subversion
   command: svn
   scanner: subversion
 subversion: *svn
-
+vagrant:
+  name: Vagrant
+  cmoonad: vagrant
+  scanner: simple_with_prefix
