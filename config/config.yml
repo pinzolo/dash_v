@@ -1,30 +1,35 @@
-git:
-  name: git
-  command: git
-  scanner: qualified_simple
-subversion: &subversion
-  name: Subversion
-  command: svn
-  scanner: subversion
-svn: *subversion
-cvs:
-  name: Concurrent Versions System
-  command: cvs
-  scanner: first_line_simple
-mercurial: &mercurial
-  name: Mercurial
-  command: hg
-  scanner: first_line_simple
-hg: *mercurial
-darcs:
-  name: Darcs
-  command: darcs
-  scanner: darcs
 bazaar: &bazaar
   name: Bazaar
   command: bzr
   scanner: bazaar
 bzr: *bazaar
+cvs:
+  name: Concurrent Versions System
+  command: cvs
+  scanner: first_line_simple
+darcs:
+  name: Darcs
+  command: darcs
+  scanner: darcs
+git:
+  name: git
+  command: git
+  scanner: qualified_simple
+homebrew: &homebrew
+  name: Homebrew
+  command: brew
+  scanner: simple
+brew: *homebrew
+mercurial: &mercurial
+  name: Mercurial
+  command: hg
+  scanner: first_line_simple
+hg: *mercurial
+subversion: &subversion
+  name: Subversion
+  command: svn
+  scanner: subversion
+svn: *subversion
 vagrant:
   name: Vagrant
   cmoonad: vagrant
