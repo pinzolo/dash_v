@@ -1,7 +1,7 @@
 git:
   name: git
   command: git
-  scanner: simple_with_prefix
+  scanner: qualified_simple
 svn: &svn
   name: Subversion
   command: svn
@@ -10,4 +10,4 @@ subversion: *svn
 vagrant:
   name: Vagrant
   cmoonad: vagrant
-  scanner: simple_with_prefix
+  scanner: qualified_simple

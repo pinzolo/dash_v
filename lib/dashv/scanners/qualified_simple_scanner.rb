@@ -1,6 +1,6 @@
 module Dashv::Scanners
-  class SimpleWithPrefixScanner
-    PATTERN = /\A[\w\s]+(?<major>\d+)\.(?<minor>\d+)\.(?<tiny>\d+)\z/.freeze
+  class QualifiedSimpleScanner
+    PATTERN = /\A.+(?<major>\d+)\.(?<minor>\d+)\.(?<tiny>\d+).*\z/.freeze
 
     def scan(text)
       match_data = PATTERN.match(text)
@@ -8,5 +8,4 @@ module Dashv::Scanners
     end
   end
 end
-
 
