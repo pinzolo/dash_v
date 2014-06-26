@@ -491,6 +491,12 @@ describe Dashv::Version do
   end# }}}
 
   describe '#tilde_greater_than?' do# {{{
+    context 'when given invalid string as version' do
+      it 'returns false' do
+        version = Dashv::Version.new(1, 2, 3)
+        expect(version.tilde_greater_than?('foo.bar.baz')).to eq false
+      end
+    end
     context 'when given 1.23.5' do
       context 'when version is 0.22.5' do
         it 'returns false' do
@@ -602,6 +608,12 @@ describe Dashv::Version do
   end# }}}
 
   describe '#tgt?' do# {{{
+    context 'when given invalid string as version' do
+      it 'returns false' do
+        version = Dashv::Version.new(1, 2, 3)
+        expect(version.tgt?('foo.bar.baz')).to eq false
+      end
+    end
     context 'when given 1.23.5' do
       context 'when version is 0.22.5' do
         it 'returns false' do
