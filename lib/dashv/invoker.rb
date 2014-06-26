@@ -15,6 +15,8 @@ module Dashv
 
     def exec(command)
       `#{command}`.strip
+    rescue => e
+      e.message
     end
 
     def get_scanner(scanner_config)

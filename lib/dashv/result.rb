@@ -11,7 +11,7 @@ module Dashv
     end
 
     def success?
-      @pid == 0
+      @exit_code == 0
     end
 
     def failure?
