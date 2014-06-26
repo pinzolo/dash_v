@@ -20,6 +20,11 @@ darcs:
   name: Darcs
   command: darcs
   scanner: darcs
+bazaar: &bazaar
+  name: Bazaar
+  command: bzr
+  scanner: bazaar
+bzr: *bazaar
 vagrant:
   name: Vagrant
   cmoonad: vagrant
