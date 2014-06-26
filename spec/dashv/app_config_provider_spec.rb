@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'dashv/app_config_provider'
 
 shared_examples_for 'config of aaa' do
   describe 'application config' do

@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'dashv/version'
 
 describe Dashv::Version do
   subject { Dashv::Version.new(1, 23, 456, 789) }

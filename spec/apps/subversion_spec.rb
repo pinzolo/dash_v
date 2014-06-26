@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'dashv'
 
 describe 'svn' do
   it 'supported' do

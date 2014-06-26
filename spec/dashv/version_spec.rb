@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'dashv/version'
 
 shared_examples_for 'zero version' do
   it ('major is 0') { expect(subject.major).to eq 0 }
