@@ -20,6 +20,14 @@ homebrew: &homebrew
   command: brew
   scanner: simple
 brew: *homebrew
+java: &java
+  name: Java
+  command: java
+  option: -version
+  scanner: java
+javac:
+  <<: *java
+  command: javac
 mercurial: &mercurial
   name: Mercurial
   command: hg

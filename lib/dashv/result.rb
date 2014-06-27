@@ -1,8 +1,9 @@
 module Dashv
   class Result
-    attr_reader :version, :command, :full_output, :exit_code, :pid
+    attr_reader :config, :version, :command, :full_output, :exit_code, :pid
 
     def initialize(values = {})
+      @config = values[:config]
       @version = values[:version]
       @command = values[:command]
       @full_output = values[:full_output]

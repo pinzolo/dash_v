@@ -3,12 +3,14 @@ require 'dashv/result'
 module Dashv
   class Invoker
     def invoke(app_config)
-      command = "#{app_config.command} #{app_config.option}"
+      command = "#{app_config.command} #{app_config.option} 2>&1"
       output = exec(command)
       status = $?
-      scan_data = get_scanner(app_config.scanner).scan(output)
-      version = scan_data ? Dashv::Version.new(scan_data) : nil
-      Dashv::Result.new(version: version, command: command, full_output: output, exit_status: status)
+      Dashv::Result.new(config: app_config,
+                        version: scan_output(output, app_config),
+                        command: command,
+                        full_output: output,
+                        exit_status: status)
     end
 
     private
@@ -17,6 +19,11 @@ module Dashv
       `#{command}`.strip
     rescue => e
       e.message
+    end
+
+    def scan_output(output, app_config)
+      scan_data = get_scanner(app_config.scanner).scan(output)
+      scan_data ? Dashv::Version.new(scan_data) : nil
     end
 
     def get_scanner(scanner_config)
