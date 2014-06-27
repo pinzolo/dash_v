@@ -12,7 +12,7 @@ describe 'javac' do
   end
   context 'when version is 1.7.0_60 on Ubuntu Server 12.04' do
     before { stub_invoke('javac 1.7.0_60') }
-    it 'returns version 1.7.0_60' do
+    it 'returns version 1.7.0p60' do
       expect(Dashv[:javac].version).to eq '1.7.0p60'
     end
   end

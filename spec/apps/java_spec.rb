@@ -24,7 +24,7 @@ Java(TM) SE Runtime Environment (build 1.7.0_60-b19)
 Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)
       _EOS_
     end
-    it 'returns version 1.7.0_60' do
+    it 'returns version 1.7.0p60' do
       expect(Dashv[:java].version).to eq '1.7.0p60'
     end
   end
