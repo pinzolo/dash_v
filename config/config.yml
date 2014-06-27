@@ -34,9 +34,13 @@ mercurial: &mercurial
   scanner: first_line_simple
 hg: *mercurial
 perl:
-  name: perl
+  name: Perl
   command: perl
   scanner: perl
+python: &python
+  name: Python
+  command: python
+  scanner: qualified_simple
 subversion: &subversion
   name: Subversion
   command: svn
