@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Vagrant' do
+describe 'Python' do
   it 'supported' do
     expect(Dashv.supported?(:python)).to eq true
   end
