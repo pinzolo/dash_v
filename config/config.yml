@@ -33,6 +33,10 @@ mercurial: &mercurial
   command: hg
   scanner: first_line_simple
 hg: *mercurial
+perl:
+  name: perl
+  command: perl
+  scanner: perl
 subversion: &subversion
   name: Subversion
   command: svn
