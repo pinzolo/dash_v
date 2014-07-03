@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Dashv::Ext' do
-  before(:all) { Dashv.extend_to_core }
+  before(:all) { Dashv.extend_to_core! }
   context 'when included' do
     before do
       mock_config = Dashv::AppConfig.new('key' =>'aaa', 'name' => 'abbr_option', 'command' => 'aaa', 'scanner' => 'qualified_simple')

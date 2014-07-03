@@ -13,7 +13,7 @@ module Dashv
     app_config_provider.has_config?(key)
   end
 
-  def self.extend_to_core
+  def self.extend_to_core!
     require 'dashv/ext'
     String.__send__(:include, Dashv::Ext)
     Symbol.__send__(:include, Dashv::Ext)
